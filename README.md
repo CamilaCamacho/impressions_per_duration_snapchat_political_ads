@@ -1,8 +1,8 @@
 # Analyzing Success of Snapchat Political Ads by Number of Impressions for Duration
 Exploring [Snapchat's Political and Advocacy Ads Library](https://www.snap.com/en-US/political-ads/) data to find if there is any relationship between timing and number of impressions of political and advocacy advertising on Snapchat.  
 
-## Initial Business/Industry Question: 
-* Can you predict the number of impressions for an advertisement for any of the years of given data?
+## Industry Question: 
+Can number of impressions for a political/advocacy advertisement in 2019 be predicted based on when the ad was set up to start delivering or on how long it ran for?
 
 ## Data Question & Metrics (using linear regression)
 ### Outline Data Analytics Process

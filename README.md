@@ -38,9 +38,12 @@ Please note that this process eliminates the 'Z' without adding anything to the 
 ``` =IF(ISBLANK(EndDate),"",(EndDate-StartDate)*86400)```
 * This formula calculates total seconds between **EndDate** and **StartDate** unless there is no specified **EndDate**, in which it leaves the **Duration** field blank. 
 * 86400 is the number of seconds in one day (24 hrs * 60 min * 60 sec = 86400)
-* A negative **Duration** time indicates an **EndDate** that happened before a **StartDate** which means the data is invalid because it is impossible for an Ad to have a negative runtime. To eliminate this data, use the _Sort & Filter_ functionality and unselect any negative numbers.
-3. 
- 
+* A negative **Duration** time indicates an **EndDate** that happened before a **StartDate** which means the data is invalid because it is impossible for an Ad to have a negative runtime. To eliminate this data, use the _Sort & Filter_ functionality and unselect any negative numbers and blanks.
+3. Linear Regression of **Duration** (aka length of Ad runtime in seconds) and number of **Impressions**
+* Select **Duration** then **Impressions** data ranges. Go the the _Insert_ tab and select _Scatter Plot_. 
+* Ensure that **Duration** is on the x-axis and **Impressions** are on the y-axis using the _Select Data_ functionality on the _Chart Design_ tab. Also check that empty cells are shown as "Gaps" and that data in hidden rows and columns is not shown. 
+
+
 ## Data Answer
 * perform calculations and model-building to answer data-related questions 
 ### Data Visualization (at least 1)

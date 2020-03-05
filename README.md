@@ -4,9 +4,7 @@ Exploring [Snapchat's Political and Advocacy Ads Library](https://www.snap.com/e
 ## Industry Question: 
 Can number of impressions for a political/advocacy advertisement in 2019 be predicted based on when the ad was set up to start delivering or on how long it ran for?
 
-## Data Question & Metrics: 
-* Outline Data Analytics Process
-
+## Data Question & Metrics:
 In order to get a comprehensive analysis of timing of political/advocacy ads throughout an entire year, I will be using the [2019 archives](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/PoliticalAds.csv).
 
 ### Metrics 
@@ -20,11 +18,11 @@ In order to get a comprehensive analysis of timing of political/advocacy ads thr
 0. For easier data analysis, copy and paste the following data columns into new sheet or workbook:
 * ADID
 * CreativeURL
-* Currency Code	
-* Spend	
-* Impressions	
-* StartDate	
-* EndDate	
+* Currency Code
+* Spend
+* Impressions
+* StartDate
+* EndDate
 * OrganizationName
 
 1. Change format of **StartDate** and **EndDate** to be a valid date format.

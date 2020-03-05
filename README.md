@@ -6,18 +6,43 @@ Can number of impressions for a political/advocacy advertisement in 2019 be pred
 
 ## Data Question & Metrics: 
 * Outline Data Analytics Process
+
 In order to get a comprehensive analysis of timing of political/advocacy ads throughout an entire year, I will be using the [2019 archives](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/PoliticalAds.csv).
 
 ### Metrics 
-* For sake of precision and since Snapchat ads are usually short videos, duration of ad run-time will be measured in **seconds**.
-* Success of a political/advocacy ad will be measured in number of **impressions** which Snapchat defines as the number of times the Ad has been viewed by Snapchatters. 
-* Duration will be calculated using **Start Date** (time at which the Ad was set up to start delivering) and, where possible, **End Date** (time at which the Ad was set up to stop delivering). No information on end date means that the Ads may be running indefinitely or until an Advertiser pauses the campaign.[(1)](https://businesshelp.snapchat.com/en-US/article/political-ads-library)
+* **Success** of a political/advocacy ad will be measured in number of **impressions** which Snapchat defines as the number of times the Ad has been viewed by Snapchatters. 
+* **Duration** will be calculated using **Start Date** (time at which the Ad was set up to start delivering) and, where possible, **End Date** (time at which the Ad was set up to stop delivering). No information on **End Date** means that the Ads may be running indefinitely or until an Advertiser pauses the campaign.[(1)](https://businesshelp.snapchat.com/en-US/article/political-ads-library). When calculating 
+* For sake of precision and since Snapchat ads are usually short videos, **duration** of ad run-time will be measured in **seconds**.
 
 ### Step-by-Step Instructions for Excel Data Analysis
 * multiple linear  regression analysis with at least two indep variables for at least one agency 
 * use manipulation tools like: split cells, arithmetic, If statements, VLOOKUP
-
-
+0. For easier data analysis, copy and paste the following data columns into new sheet or workbook:
+* ADID
+* CreativeURL
+* Currency Code	
+* Spend	
+* Impressions	
+* StartDate	
+* EndDate	
+* OrganizationName	
+* Gender	
+* AgeBracket	
+* CountryCode	
+* Regions (Included)	
+* Interests	Segments
+1. Change format of **StartDate** and **EndDate** to be a valid date format.
+* Current format: yyyy/mm/dd hh:mm:ssZ 
+* The 'Z' at the end refers to the timezone. It stands for Zulu time, aka Greenwich Mean Time (GMT).
+* First, we must remove the Z from all Date cells using the _SplitCells_ function on the _Data_ tab. 
+To do this create an empty column to the right of **StartDate**. Select the **StartDate** data range and using the _Text to Columns_ functionality, select "Delimited" and click "Next >", set the delimiter of your data as "Other:" and type in 'Z' and click "Next >", and leave the data format as "General" and click "Finished". Repeat this process for the **EndDate** data range.
+Please note that this process eliminates the 'Z' without adding anything to the empty columns we created to the right of it but we still needed to create those empty columns so as to not overwrite any existing data. You may delete these empty columns.
+* Now, we must change the Date cells into a recognizable Date format. Select the **StartDate** and **EndDate** data columns, using the _Number Format_ editor on the _Home_ page that says "General" and click "More Number Formats...". Select "Custom" and as "Type:" write 'yyyy/mm/dd hh:mm:ss' and click "OK". 
+2. Calculate Duration of Ad runtime
+* To calculate total seconds between **EndDate** and **StartDate** use the following formula:
+``` =IF(ISBLANK(EndDate),(NOW()-StartDate)*86400,(EndDate-StartDate)*86400)```
+* This formula calculates total seconds between **EndDate** and **StartDate** but if there is no data for **EndDate**
+* 86400 is the number of seconds in one day (24 hrs * 60 min * 60 sec = 86400)
 
 ## Data Answer
 * perform calculations and model-building to answer data-related questions 

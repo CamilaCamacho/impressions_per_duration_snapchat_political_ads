@@ -25,7 +25,8 @@ In order to get a comprehensive analysis of timing of political/advocacy ads thr
 * Impressions	
 * StartDate	
 * EndDate	
-* OrganizationName	
+* OrganizationName
+
 1. Change format of **StartDate** and **EndDate** to be a valid date format.
 * Current format: yyyy/mm/dd hh:mm:ssZ 
 * The 'Z' at the end refers to the timezone. It stands for Zulu time, aka Greenwich Mean Time (GMT).
@@ -33,15 +34,20 @@ In order to get a comprehensive analysis of timing of political/advocacy ads thr
 To do this create an empty column to the right of **StartDate**. Select the **StartDate** data range and using the _Text to Columns_ functionality, select "Delimited" and click "Next >", set the delimiter of your data as "Other:" and write 'Z' and click "Next >", and leave the data format as "General" and click "Finished". Repeat this process for the **EndDate** data range.
 Please note that this process eliminates the 'Z' without adding anything to the empty columns we created to the right of it but we still needed to create those empty columns so as to not overwrite any existing data. You may delete these empty columns.
 * Now, we must change the Date cells into a recognizable Date format. Select the **StartDate** and **EndDate** data columns, using the _Number Format_ editor on the _Home_ page that says "General" and click "More Number Formats...". Select "Custom" and as "Type:" write 'yyyy/mm/dd hh:mm:ss' and click "OK". 
+
 2. Calculate Duration of Ad runtime
 * To calculate total seconds between **EndDate** and **StartDate** use the following formula:
 ``` =IF(ISBLANK(EndDate),"",(EndDate-StartDate)*86400)```
 * This formula calculates total seconds between **EndDate** and **StartDate** unless there is no specified **EndDate**, in which it leaves the **Duration** field blank. 
 * 86400 is the number of seconds in one day (24 hrs * 60 min * 60 sec = 86400)
 * A negative **Duration** time indicates an **EndDate** that happened before a **StartDate** which means the data is invalid because it is impossible for an Ad to have a negative runtime. To eliminate this data, use the _Sort & Filter_ functionality and unselect any negative numbers and blanks.
+
 3. Linear Regression of **Duration** (aka length of Ad runtime in seconds) and number of **Impressions**
 * Select **Duration** then **Impressions** data ranges. Go the the _Insert_ tab and select _Scatter Plot_. 
-* Ensure that **Duration** is on the x-axis and **Impressions** are on the y-axis using the _Select Data_ functionality on the _Chart Design_ tab. Also check that empty cells are shown as "Gaps" and that data in hidden rows and columns is not shown. 
+* Ensure that **Duration** is on the x-axis and **Impressions** are on the y-axis using the _Select Data_ functionality on the _Chart Design_ tab. Also check that empty cells are shown as "Gaps" and that data in hidden rows and columns is not shown. (See Data Visualization Below)
+
+4. Correlation Between **Spend**, **Duration**, and **Impressions**
+* Using the _Data Analytics_ functionality in the _Data_ tab, choose "Correlation". Select **Spend**, **Duration**, and **Impressions** data ranges as "Input Range:". Make sure it's grouped by "Column" and check "Labels in First Row".
 
 
 ## Data Answer

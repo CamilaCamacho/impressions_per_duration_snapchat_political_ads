@@ -19,25 +19,29 @@ See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapc
 Overall, this data shows that duration of runtime of an Ad is a poor indicator of how much money an advertiser paid Snapchat to air it and an even worse indicator of how many Snapchat users were delivered the ad. 
 
 #### Duration of Runtime effect on Money Spent
-Similarly, the relationship between duration of runtime and the amount of money spent on airing the advertisement is very weak. The R^2 of 0.0141 implies that only about 1.41% of money spent could be predicted on Duration. 
 ![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Spend.png)
+* As shown in the chart above, the relationship between duration of runtime and the amount of money spent on airing the advertisement is very weak. The R^2 of 0.0141 implies that only about 1.41% of money spent could be predicted on Duration. 
 #### Duration of Runtime effect on Impressions
-As shown in the chart below, there is a very weak relationship between duration of runtime and how many impressions it received. The R^2 of 0.0087 implies that only about 0.87% of Impressions could be predicted on Duration. 
 ![Duration of Runtime effect on Impressions](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Impressions.png)
+* Similarly, there is a very weak relationship between duration of runtime and how many impressions it received. The R^2 of 0.0087 implies that only about 0.87% of Impressions could be predicted on Duration. 
 #### Money Spent effect on Impressions
-A much better indicator of Impressions, however, is how much money was spent to deliver the ads. As shown below, the R^2 of 0.7261 implies that roughly 72.61% of Impressions could be predicted on amount an advertiser paid to air the app. 
 ![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Spend%20on%20Impressions.png)
+* A much better indicator of Impressions, however, is how much money was spent to deliver the ads. As shown below, the R^2 of 0.7261 implies that roughly 72.61% of Impressions could be predicted on amount an advertiser paid to air the app. 
 #### Correlation
-The above is supported by the .85 correlation between Impressions and Spent (USD). In comparison, Duration and Spend (USD) have a 0.12 correlation and Duration and Impressions have a 0.09 correlation.
 ![Correlation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Correlation.png)
-#### Regression
-* The regression output gives us the following equation:
+* The above is supported by the .85 correlation between Impressions and Spent (USD). In comparison, Duration and Spend (USD) have a 0.12 correlation and Duration and Impressions have a 0.09 correlation.
+#### Regressions
+![Duration and Spend Regression](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Regression.png)
+* The multi-linear regression output gives us the following equation:
 ```Predicted Impressions = 199340.39 + (336.61*Spend(USD)) + (-0.014*Duration(sec))```
 * This equation explains that as an advertiser spends more money on an ad, ... 
-* The _R Square_ value of 0.726 implies this model explains 72.6% of variation in Impressions. 
-* However, the _p-value_ of **Duration (sec)** is larger than 0.05, which means 
-* The _Standard Error_ of 3022121.75 
-![Regression](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Regression.png)
+* The R Square value of 0.726 implies this model explains 72.6% of variations in Impressions. 
+* The p-value of Duration is much larger than 0.05, however, which means that it is insignificant to predicting Impressions.
+* Running the regression without Duration improves the regression model (as shown below). 
+![Spend Regression](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Spend%20Regression.png)
+* This regression output gives us the following equation:
+```Predicted Impressions = 169027.22 + (336.25*Spend(USD))```
+* The R Square value of 0.85 implies this model explains 85% of variations in Impressions. 
 
 ## Industry Answer & Findings
 ### Summarizing findings (>250 words)

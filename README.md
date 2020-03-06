@@ -17,21 +17,24 @@ See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapc
 
 ## Data Answer
 
-### Correlation
-
-|                | Impressions | Spend (USD) | Duration (sec) |
-|----------------|-------------|-------------|----------------|
-| Impressions    |      1      |             |                |
-| Spend (USD)    | 0.852113347 |      1      |                |
-| Duration (sec) | 0.093256781 | 0.118532911 |        1       |
-
 ### Data Visualization
 * at lest one excel chart that ilustrates simple multiple linear regression with only one of the selected indep variables that has labeled best fit line, R^2 value, x&y axes, title
 #### Duration of Runtime effect on Impressions
 ![Duration of Runtime effect on Impressions](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Impressions.png)
 #### Duration of Runtime effect on Money Spent
 ![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Spend.png)
-
+#### Correlation
+![Correlation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Correlation.png)
+* **Impressions** and **Spend (USD)** have a correlation of 0.85 which means they have a moderately strong relationship to one another. 
+* **Impressions** and **Duration (sec)**, on the other hand, have a correlation of 0.09. This meeans 
+#### Regression
+![Regression](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Regression.png)
+* The regression output gives us the following equation:
+```Predicted Impressions = 199340.39 + (336.61*Spend(USD)) + (-0.014*Duration(sec))```
+* This equation explains that as an advertiser spends more money on an ad, ... 
+* The _R Square_ value of 0.726 implies this model explains 72.6% of variation in Impressions. 
+* However, the _p-value_ of **Duration (sec)** is larger than 0.05, which means 
+* The _Standard Error_ of 3022121.75 
 
 ## Industry Answer & Findings
 ### Summarizing findings (>250 words)
@@ -39,6 +42,7 @@ See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapc
 * relate data findings back to initial business question and outline what your linear regression model tells us about election ads, ... 
 * What do your findings mean and why might this be important? Highlight your confidence in your predictions based on your linear regression models, how this info should be used in practice, and what additional data might be used for further analysis. 
 
+--- 
 
 ## Step-by-Step Instructions for Excel Data Analysis
 * multiple linear  regression analysis with at least two indep variables for at least one agency 

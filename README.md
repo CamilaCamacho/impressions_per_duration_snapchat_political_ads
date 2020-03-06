@@ -16,7 +16,15 @@ Can the duration of runtime for a Snapchat political/advocacy advertisement pred
 See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/2019PoliticalAds_readme.txt) or [FAQ](https://businesshelp.snapchat.com/en-US/article/political-ads-library) for more info.
 
 ## Data Answer
-* perform calculations and model-building to answer data-related questions 
+
+### Correlation
+
+|                | Impressions | Spend (USD) | Duration (sec) |
+|----------------|-------------|-------------|----------------|
+| Impressions    |      1      |             |                |
+| Spend (USD)    | 0.852113347 |      1      |                |
+| Duration (sec) | 0.093256781 | 0.118532911 |        1       |
+
 ### Data Visualization
 * at lest one excel chart that ilustrates simple multiple linear regression with only one of the selected indep variables that has labeled best fit line, R^2 value, x&y axes, title
 #### Duration of Runtime effect on Impressions
@@ -24,8 +32,6 @@ See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapc
 #### Duration of Runtime effect on Money Spent
 ![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Spend.png)
 
-
-### Links to outside sources
 
 ## Industry Answer & Findings
 ### Summarizing findings (>250 words)

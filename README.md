@@ -1,13 +1,14 @@
 # Analyzing Success of Snapchat Political Ads by Number of Impressions for Duration
-Exploring [Snapchat's Political and Advocacy Ads Library](https://www.snap.com/en-US/political-ads/) data to find if there is any relationship between timing and number of impressions of political and advocacy advertising Snapon Snapchat.  
+Exploring [Snapchat's Political and Advocacy Ads Library](https://www.snap.com/en-US/political-ads/) data to find if there is any relationship between timing and number of impressions of political and advocacy advertising on Snapchat.  
 
-## Industry Question: 
-Can number of impressions for a political/advocacy advertisement in 2019 be predicted based on when the ad was set up to start delivering or on how long it ran for?
+## Industry Question:
+Can number of impressions or cost for a political/advocacy advertisement in 2019 be predicted based on how long it ran for?
 
 ## Data Question & Metrics:
 In order to get a comprehensive analysis of timing of political/advocacy ads throughout an entire year, I will be using the [2019 archives](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/PoliticalAds.csv).
 
 ### Metrics 
+See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/2019PoliticalAds_readme.txt) for more info.
 * Snapchat defines **Impressions** as the number of times the Ad has been viewed by Snapchatters. 
 * **Spend** is the amount in local currency that an advertiser has spent over the campaign up to current date. For consistency, all **Spend** data will be converted to USD. 
 * **Duration** will be calculated using **Start Date** (time at which the Ad was set up to start delivering) and, where possible, **End Date** (time at which the Ad was set up to stop delivering). No information on **End Date** means that the Ads may be running indefinitely or until an Advertiser pauses the campaign.[(1)](https://businesshelp.snapchat.com/en-US/article/political-ads-library). To get the most accurate results, we will be ignoring Ads with no specified **End Date**.

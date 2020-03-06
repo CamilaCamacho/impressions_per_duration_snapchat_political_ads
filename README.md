@@ -1,12 +1,12 @@
-# Analyzing Success of Snapchat Political Ads by Number of Impressions for Duration
-Exploring [Snapchat's Political and Advocacy Ads Library](https://www.snap.com/en-US/political-ads/) data to find if there is any relationship between runtime and number of impressions of political and advocacy advertising on Snapchat.  
+# Analyzing Runtime and Money Spent on Snapchat Political Ads by Number of Impressions
+Exploring [Snapchat's Political and Advocacy Ads Library](https://www.snap.com/en-US/political-ads/) data to find if there is any relationship between duration of runtime and number of impressions of political and advocacy advertising on Snapchat.
 In order to get a comprehensive analysis of timing of political/advocacy ads throughout an entire year, I will be using the [2019 archives](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/PoliticalAds.csv).
 
 ## Industry Question:
-Does how long a political/advocacy advertisement ran for in 2019 influence how much it cost or number of times it was delivered to users?
+Does how long a political/advocacy advertisement ran for in 2019 influence number of times it was delivered to users?
 
 ## Data Question:
-Can the duration of runtime for a Snapchat political/advocacy advertisement predict how much money an advertiser spent or how number of impressions? 
+Can the duration of runtime for a Snapchat political/advocacy advertisement predict the number of impressions? 
 
 ### Metrics 
 * Snapchat defines **Impressions** as the number of times the Ad has been viewed by Snapchatters. 
@@ -19,6 +19,10 @@ See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapc
 * perform calculations and model-building to answer data-related questions 
 ### Data Visualization
 * at lest one excel chart that ilustrates simple multiple linear regression with only one of the selected indep variables that has labeled best fit line, R^2 value, x&y axes, title
+#### Duration of Runtime effect on Impressions
+![Duration of Runtime effect on Impressions](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Impressions.png)
+#### Duration of Runtime effect on Money Spent
+![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Spend.png)
 
 
 ### Links to outside sources

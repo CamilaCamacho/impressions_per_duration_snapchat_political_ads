@@ -15,30 +15,33 @@ Can the duration of runtime for a Snapchat political/advocacy advertisement pred
 * For sake of precision and since Snapchat ads are usually short videos, **duration** of ad run-time will be measured in **seconds**.
 See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/2019PoliticalAds_readme.txt) or [FAQ](https://businesshelp.snapchat.com/en-US/article/political-ads-library) for more info.
 
-## Data Answer
+## Data Interpretation
+Overall, this data shows that duration of runtime of an Ad is a poor indicator of how much money an advertiser paid Snapchat to air it and an even worse indicator of how many Snapchat users were delivered the ad. 
 
-### Data Visualization
-* at lest one excel chart that ilustrates simple multiple linear regression with only one of the selected indep variables that has labeled best fit line, R^2 value, x&y axes, title
-#### Duration of Runtime effect on Impressions
-![Duration of Runtime effect on Impressions](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Impressions.png)
 #### Duration of Runtime effect on Money Spent
+Similarly, the relationship between duration of runtime and the amount of money spent on airing the advertisement is very weak. The R^2 of 0.0141 implies that only about 1.41% of money spent could be predicted on Duration. 
 ![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Spend.png)
+#### Duration of Runtime effect on Impressions
+As shown in the chart below, there is a very weak relationship between duration of runtime and how many impressions it received. The R^2 of 0.0087 implies that only about 0.87% of Impressions could be predicted on Duration. 
+![Duration of Runtime effect on Impressions](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Impressions.png)
+#### Money Spent effect on Impressions
+A much better indicator of Impressions, however, is how much money was spent to deliver the ads. As shown below, the R^2 of 0.7261 implies that roughly 72.61% of Impressions could be predicted on amount an advertiser paid to air the app. 
+![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Spend%20on%20Impressions.png)
 #### Correlation
+The above is supported by the .85 correlation between Impressions and Spent (USD). In comparison, Duration and Spend (USD) have a 0.12 correlation and Duration and Impressions have a 0.09 correlation.
 ![Correlation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Correlation.png)
-* **Impressions** and **Spend (USD)** have a correlation of 0.85 which means they have a moderately strong relationship to one another. 
-* **Impressions** and **Duration (sec)**, on the other hand, have a correlation of 0.09. This meeans 
 #### Regression
-![Regression](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Regression.png)
 * The regression output gives us the following equation:
 ```Predicted Impressions = 199340.39 + (336.61*Spend(USD)) + (-0.014*Duration(sec))```
 * This equation explains that as an advertiser spends more money on an ad, ... 
 * The _R Square_ value of 0.726 implies this model explains 72.6% of variation in Impressions. 
 * However, the _p-value_ of **Duration (sec)** is larger than 0.05, which means 
 * The _Standard Error_ of 3022121.75 
+![Regression](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Regression.png)
 
 ## Industry Answer & Findings
 ### Summarizing findings (>250 words)
-### Data Interpretation
+
 * relate data findings back to initial business question and outline what your linear regression model tells us about election ads, ... 
 * What do your findings mean and why might this be important? Highlight your confidence in your predictions based on your linear regression models, how this info should be used in practice, and what additional data might be used for further analysis. 
 

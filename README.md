@@ -16,8 +16,6 @@ Can the duration of runtime for a Snapchat political/advocacy advertisement pred
 See [documentation](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/2019PoliticalAds_readme.txt) or [FAQ](https://businesshelp.snapchat.com/en-US/article/political-ads-library) for more info.
 
 ## Data Interpretation
-Overall, this data shows that duration of runtime of an Ad is a poor indicator of how much money an advertiser paid Snapchat to air it and an even worse indicator of how many Snapchat users were delivered the ad. 
-
 #### Duration of Runtime effect on Money Spent
 ![Duration of Runtime effect on Money Spent](https://github.com/CamilaCamacho/timing_of_impressions_snapchat_political_ads/blob/master/data_visualizations/Duration%20on%20Spend.png)
 * As shown in the chart above, the relationship between duration of runtime and the amount of money spent on airing the advertisement is very weak. The R^2 of 0.0141 implies that only about 1.41% of money spent could be predicted on Duration. 
@@ -45,9 +43,12 @@ Overall, this data shows that duration of runtime of an Ad is a poor indicator o
 
 ## Industry Answer & Findings
 ### Summarizing findings (>250 words)
-
 * relate data findings back to initial business question and outline what your linear regression model tells us about election ads, ... 
 * What do your findings mean and why might this be important? Highlight your confidence in your predictions based on your linear regression models, how this info should be used in practice, and what additional data might be used for further analysis. 
+
+Overall, this data shows that duration of runtime of an ad is a poor indicator of how much money an advertiser paid Snapchat to air it and an even worse indicator of how many Snapchat users were delivered the ad. This was initially surprising because I had assumed that advertisements were priced depending on the amount of 'airtime' they received. Instead, Snapchat's advertisement structure prices ads per 1,000 impressions[(1)]. If this was the only pricing model, however, number of Impressions and cost of app would have a much higher correlation and stronger linear relationship. Additionally, Snapchat also offers a "goal-based bidding" structure in which advertisers can set a maximum price for each time a user engages with the Ad beyond just viewing it. These "goal options" include when users swipe-up to access an associated link and app installs. 
+
+[(1)](https://strikesocial.com/blog/snapchat-cost/)
 
 --- 
 
